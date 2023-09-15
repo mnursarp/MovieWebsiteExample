@@ -7,7 +7,7 @@
 }
 
 body{
-    height: 100vh; /*sidebar uzunluk ayarı icin*/
+    height: 200vh; /*sidebar uzunluk ayarı icin*/
     font-family: 'News Cycle', sans-serif;
 }
 /*! temel css bitisi */
@@ -96,12 +96,28 @@ body{
     position: absolute; /*eksenini değiştirmek için*/
     right: 1px; /*sağa 1px yaklaştır*/
 }
+/*! navbar bitisi */
 
+/*! sidebar başlangıcı */
 .sidebar{
     background-color: #1c1c1c;
     color: white;
     height: 100%; /*asagi dogru uzun olmasi icin*/
     width: 50px;
+    display: flex;
+    flex-direction: column; /*alt alta sıralamak için*/
+    align-items: center; /*bulunduğu sırada ortalamak için*/
+    padding-top: 60px; /*boşluklar için*/
+    row-gap: 40px; /*ikonların birbirine uzaklığı*/
+    position: fixed; /* sidebarın sabit durması için */
+    top: 0;
 }
-/*! navbar bitisi */
+
+.sidebar i{
+    /* sidebarın içindeki tüm i ler (ikonlar) */
+    color: white;
+    font-size: 17px;
+    cursor: pointer; /* fareyi üsütne getirince değişecek */
+}
+/*! sidebar bitisi */
 

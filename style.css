@@ -1,0 +1,24 @@
+/*! temel css baslangici */
+
+*{
+    margin: 0; /* tarayicinin kenar bosluklari icin*/
+}
+
+body{
+    height: 100vh; /*sidebar uzunluk ayarı icin*/
+}
+
+/*! temel css bitisi */
+
+.navbar{
+    background-color: #1c1c1c;
+    height: 60px;
+    color: white;
+}
+
+.sidebar{
+    background-color: #1c1c1c;
+    color: white;
+    height: 100%; /*asagi dogru uzun olmasi icin*/
+    width: 50px;
+}

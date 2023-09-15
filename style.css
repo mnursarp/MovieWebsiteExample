@@ -1,19 +1,100 @@
-/*! temel css baslangici */
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css");
 
+/*! temel css baslangici */
 *{
     margin: 0; /* tarayicinin kenar bosluklari icin*/
 }
 
 body{
     height: 100vh; /*sidebar uzunluk ayarı icin*/
+    font-family: 'News Cycle', sans-serif;
 }
-
 /*! temel css bitisi */
 
+/*! navbar başlangıcı */
 .navbar{
     background-color: #1c1c1c;
-    height: 60px;
+    height: 50px;
     color: white;
+    position: sticky; /*navbarın sabit olması için*/
+    top: 0;
+}
+
+.navbar-wrapper{
+    display: flex; /*yan yana getirmek için*/
+    justify-content: space-between; /*başta ortada sonda olması için*/
+    height: 100%;
+    padding: 0 50px; /*yukarı aşagı0 sagdan soldan 50px boşluk*/
+}
+
+.logo{
+    font-size: 30px;
+    color: rgb(170, 73, 255);
+}
+
+.menu-list{
+    display: flex; /*menudeki listeleri yan yana getiriyor*/
+    list-style: none; /*liste başındaki nokktayı istemiyoruz*/
+    column-gap: 30px; /*aralarını 30px aç*/
+    padding: 10px 50px; /*ben ekledm*/
+}
+
+.menu-list-item{
+    cursor: pointer; /*tıklanabilir olması için*/
+}
+
+.menu-list-item:hover{
+    font-weight: bold; /*tıklama esnasında yazının kalınlaşması için*/
+}
+
+.menu-list-item.active{
+    font-weight: bold; /*ana sayfada olduğu için daha kalın olcak*/
+}
+
+.profile-container{
+    display: flex; /*yan yana sıralamak için*/
+    align-items: center; /*dikeyde de hizala*/
+    column-gap: 20px; /*aralarına 20px boşluk bırak*/
+}
+
+.profile-picture{
+    width: 32px;
+    height: 32px;
+    object-fit: cover; /*görüntünün basık olmaması için*/
+    border-radius: 50%; /*yuvarlak olması için resmin*/
+}
+
+.profile-text-container{
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    line-height: 1; /*aynı hizada olması için hesabım ve yanındaki ikon için*/
+}
+
+.toggle{
+    width: 40px;
+    height: 20px;
+    background-color: white;
+    position: relative; /*toggle ballın pozisyonu için*/
+    border-radius: 30px;
+    display: flex; /*yatayda */
+    align-items: center; /*dikeyde*/
+    justify-content: space-around; /*kenar boşluğu beyaz kısımdakı*/
+}
+
+.toggle-icon{
+    color: goldenrod;
+}
+
+.toggle-ball{
+    width: 18px;
+    height: 18px;
+    background-color: rgb(170, 73, 255);
+    border-radius: 50%;
+    cursor: pointer; /*fareyi götürünce*/
+    position: absolute; /*eksenini değiştirmek için*/
+    right: 1px; /*sağa 1px yaklaştır*/
 }
 
 .sidebar{
@@ -22,3 +103,5 @@ body{
     height: 100%; /*asagi dogru uzun olmasi icin*/
     width: 50px;
 }
+/*! navbar bitisi */
+

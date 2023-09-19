@@ -7,8 +7,13 @@
 }
 
 body{
-    /*height: 200vh; sidebar uzunluk ayarı icin*/
+    height: 200vh; /*sidebar uzunluk ayarı icin*/
     font-family: 'News Cycle', sans-serif;
+}
+
+.container{
+    background-color: black;
+    color: white;
 }
 /*! temel css bitisi */
 
@@ -171,3 +176,16 @@ body{
 }
 /*! featured bitisi */
 
+/*! Filter Başlangıcı */
+.movie-list-filter{
+    margin: 20px 0 20px 50px; /* yukarıdan 20px sağdan 0 aşağıdan 20px soldan 50px */
+    padding: 20px; /* sol taraftan 20px padding */
+}
+
+.movie-list-filter select{
+    background-color: #1c1c1c;
+    color: white;
+    padding: 7px 0; /* yukardan aşağıdan 7 sağdan soldan 0 */
+    width: 125px;
+}
+/*! Filter Bitişi */

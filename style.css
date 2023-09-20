@@ -207,6 +207,7 @@ body{
 
 .movie-list-wrapper{
     overflow: hidden;
+    position: relative;
 }
 
 .movie-item{
@@ -265,5 +266,21 @@ body{
 
 .movie-item-buttons i:hover{
     opacity: 1; /* fareyi götürünce opacity 1 */
+}
+
+.arrow{
+    width: 100px;
+    display: flex;
+    font-size: 120px;
+    position: absolute; /* eksenden çıkardık */
+    right: 0;
+    top: 100px;
+    opacity: 0.5;
+    transition: 0.5s ease all;
+    cursor: pointer;
+}
+
+.arrow:hover{
+    opacity: 1;
 }
 /*! Movie list Bitişi */

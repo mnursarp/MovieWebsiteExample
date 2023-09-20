@@ -24,6 +24,7 @@ body{
     color: white;
     position: sticky; /*navbarın sabit olması için*/
     top: 0;
+    z-index: 1; /* navbarın önüne bir şey geçmemesi için */
 }
 
 .navbar-wrapper{
@@ -149,6 +150,7 @@ body{
     padding: 10px;
     margin: 30px 0;
     font-size: 13.8px;
+    color: black;
 }
 
 .featured-buttons{
@@ -189,3 +191,79 @@ body{
     width: 125px;
 }
 /*! Filter Bitişi */
+
+/*! Movie list Başlangıcı */
+.movie-list-container{
+    margin-left: 70px; /* sol taraftan uzaklaşması için */
+}
+
+.movie-list{
+    list-style: none; /* ul nin noktası gitsin diye */
+    height: 300px;
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.movie-list-wrapper{
+    overflow: hidden;
+}
+
+.movie-item{
+    position: relative;
+}
+
+.movie-item:hover .movie-item-title, .movie-item:hover .movie-item-buttons{
+    opacity: 1;
+}
+
+.movie-item:hover .movie-item-img{
+    transform: scale(1.2); /* 1.2 büyüsün */
+    margin: 0, 30px;
+    transition: 1s all ease-in-out;
+    opacity: 0.5;
+}
+
+.movie-item-img{
+    width: 240px;
+    /*padding: 0;*/
+    height: 180px;
+    object-fit: cover;
+}
+
+.movie-item-title{
+    background-color: rgb(40, 40, 40, 0.4);
+    padding: 0, 10px;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%; /* yukardan uzaklık */
+    left: 40px;
+    opacity: 0;
+    transition: 0.7s all ease-in-out;
+}
+
+.movie-item-buttons{
+    background-color: rgb(40, 40, 40, 0.4);
+    padding: 10px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 20%; /* aşağıdan uzaklık */
+    left: 40px;
+    display: flex;
+    column-gap: 20px;
+    opacity: 0;
+    transition: 0.6s all ease-in-out;
+}
+
+.movie-item-buttons i{
+    cursor: pointer;
+    opacity: .5;
+    font-size: 16px;
+    transition: 0.6sn all ease; /* butonlardaki hover geçişi yavaşlatmak için */
+}
+
+.movie-item-buttons i:hover{
+    opacity: 1; /* fareyi götürünce opacity 1 */
+}
+/*! Movie list Bitişi */

@@ -156,7 +156,8 @@ body{
 
 .featured-buttons{
     display: flex; /*yan yana getir butonları*/
-    column-gap: 20px; /* aralarına 20px boşluk koy */
+    gap: 20px; /* aralarına 20px boşluk koy */
+    flex-wrap: wrap;
 }
 
 .featured-buttons button{
@@ -325,3 +326,29 @@ body{
     color: black;
 }
 /*! Dark Mode Bitişi */
+
+/*! Responsive Başlangıcı */
+@media only screen and (max-width: 823px){
+    /* 823px den küçükse navbardaki yazılar gitsin */
+    .menu-container{
+        display: none;
+    }
+
+    .featured-content{
+        height: 60vh;
+    }
+
+    .featured-title{
+        width: 200px;
+    }
+
+    .featured-desc{
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        max-width: 300px;
+        padding: 0;
+    }
+}
+/*! Responsive Bitişi */

@@ -101,6 +101,7 @@ body{
     cursor: pointer; /*fareyi götürünce*/
     position: absolute; /*eksenini değiştirmek için*/
     right: 1px; /*sağa 1px yaklaştır*/
+    transition: .4s ease all;
 }
 /*! navbar bitisi */
 
@@ -286,3 +287,41 @@ body{
     opacity: 1;
 }
 /*! Movie list Bitişi */
+
+/*! Dark Mode Başlangıcı */
+.container.active{
+    background-color: white;
+    color: black;
+}
+
+.navbar.active{
+    background-color: white;
+    color: black;
+}
+
+.sidebar.active{
+    background-color: white;
+}
+
+.sidebar i.active{
+    color: black;
+}
+
+.movie-list-title.active{
+    color: black;
+}
+
+.toggle.active{
+    background-color: #1c1c1c;
+}
+
+.toggle-ball.active{
+    background-color: rgb(94, 39, 139);
+    transform: translateX(-20px);
+}
+
+.movie-list-filter select.active{
+    background-color: white;
+    color: black;
+}
+/*! Dark Mode Bitişi */
